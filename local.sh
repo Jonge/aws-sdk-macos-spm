@@ -1,16 +1,16 @@
 #!/bin/sh
 
-# Uses aws-sdk-ios repo to create local copies of the XCF binaries
+# Uses aws-sdk-macos repo to create local copies of the XCF binaries
 # so that modified source can be used to consume the SPM package.
 
-export SOURCE_REPO_DIR=../aws-sdk-ios
+export SOURCE_REPO_DIR=../aws-sdk-macos
 export XCF_OUTPUT_DIR=xcframeworks/output/XCF
 
 # clear the output
 # rm -rf "${SOURCE_REPO_DIR}/${XCF_OUTPUT_DIR}"
 
 if [ ! -d "${SOURCE_REPO_DIR}" ]; then
-    echo "AWS SDK iOS repo is required: ${SOURCE_REPO_DIR}" 
+    echo "AWS SDK macOS repo is required: ${SOURCE_REPO_DIR}"
     exit 0
 fi
 
